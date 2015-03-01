@@ -31,6 +31,7 @@ public class MenuPanel extends AbstractClientPanel {
 		gbc.insets = new Insets(10, 0, 10, 0);
 		add(label, gbc);
 		
+		//TODO: add listener for these button, gui listeners stay in gui package, anything that communicates with the models should go in the controller package
 		gbc.insets = new Insets(0, 0, 0, 0);
 		menuButtons = new JButton[12];
 		ParentMenuButtonActionListener parentActionListener = new ParentMenuButtonActionListener();

@@ -1,5 +1,6 @@
 package gui;
 
+import gui.panels.BikesMainPanel;
 import gui.panels.MenuPanel;
 
 import java.awt.BorderLayout;
@@ -13,6 +14,7 @@ public class MainWindow extends AbstractClientWindow {
 	
 	// panels
 	private JPanel menuPanel;
+	private JPanel bikesMainPanel;
 	
 	@Override
 	protected void init() {
@@ -25,5 +27,7 @@ public class MainWindow extends AbstractClientWindow {
 		menuPanel = new MenuPanel();
 		add(menuPanel, BorderLayout.WEST);
 		
+		bikesMainPanel = new BikesMainPanel();
+		add(bikesMainPanel, BorderLayout.CENTER);
 	}
 }
