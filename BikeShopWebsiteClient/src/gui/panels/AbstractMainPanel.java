@@ -13,7 +13,7 @@ public abstract class AbstractMainPanel extends AbstractClientPanel{
 	@Override
 	protected void init() {
 		tablePanel = new TablePanel();
-		gbc.weighty = 3;
+		gbc.weighty = 10;
 		Utils.setGBC(gbc, 1, 1, 1, 1, GridBagConstraints.BOTH);
 		add(tablePanel, gbc);
 		
