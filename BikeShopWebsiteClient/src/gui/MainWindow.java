@@ -28,6 +28,5 @@ public class MainWindow extends AbstractClientWindow {
 		add(menuPanel, BorderLayout.WEST);
 		
 		bikesMainPanel = new BikesMainPanel();
-		add(bikesMainPanel, BorderLayout.CENTER);
 	}
 }

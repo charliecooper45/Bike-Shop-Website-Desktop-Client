@@ -7,5 +7,10 @@ public class BikesMainPanel extends AbstractMainPanel {
 	@Override
 	protected void init() {
 		super.init();
+
+//		 tablePanel = new BikesTablePanel();
+//		 gbc.weighty = 10;
+//		 Utils.setGBC(gbc, 1, 1, 1, 1, GridBagConstraints.BOTH);
+//		 add(tablePanel, gbc);
 	}
 }

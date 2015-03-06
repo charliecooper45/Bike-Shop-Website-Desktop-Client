@@ -1,22 +1,17 @@
 package gui.panels;
 
-import java.awt.GridBagConstraints;
-
 import gui.Utils;
+
+import java.awt.GridBagConstraints;
 
 public abstract class AbstractMainPanel extends AbstractClientPanel{
 	private static final long serialVersionUID = 1L;
 	
-	private AbstractClientPanel tablePanel;
-	private AbstractClientPanel buttonsPanel;
+	protected AbstractClientPanel tablePanel;
+	protected AbstractClientPanel buttonsPanel;
 	
 	@Override
 	protected void init() {
-		tablePanel = new TablePanel();
-		gbc.weighty = 10;
-		Utils.setGBC(gbc, 1, 1, 1, 1, GridBagConstraints.BOTH);
-		add(tablePanel, gbc);
-		
 		buttonsPanel = new ButtonsPanel();
 		gbc.weighty = 1;
 		Utils.setGBC(gbc, 2, 1, 1, 1, GridBagConstraints.BOTH);
