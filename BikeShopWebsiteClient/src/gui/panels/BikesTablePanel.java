@@ -11,6 +11,10 @@ import javax.swing.table.AbstractTableModel;
 
 public class BikesTablePanel extends AbstractTablePanel {
 	private static final long serialVersionUID = 1L;
+	
+	public BikesTablePanel() {
+		init();
+	}
 
 	@Override
 	public void init() {

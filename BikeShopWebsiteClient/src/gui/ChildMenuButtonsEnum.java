@@ -1,5 +1,5 @@
 package gui;
 
-public enum ChildMenuButtons {
+public enum ChildMenuButtonsEnum {
 	BIKES, BIKE_MODELS, BRANDS, STANDARD_USERS, ADMINISTRATORS
 }

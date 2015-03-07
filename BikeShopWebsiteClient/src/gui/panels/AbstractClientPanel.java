@@ -14,8 +14,6 @@ public abstract class AbstractClientPanel extends JPanel {
 		gbc = new GridBagConstraints();
 		gbc.weightx = 1;
 		gbc.weighty = 1;
-		
-		init();
 	}
 
 	protected abstract void init();

@@ -24,7 +24,7 @@ public class LoginWindow extends AbstractClientWindow {
 	private JButton loginButton;
 	private JLabel errorLabel;
 	private JLabel passwordLabel;
-
+	
 	@Override
 	protected void init() {
 		setTitle("BikeShopWebsite Client Login");

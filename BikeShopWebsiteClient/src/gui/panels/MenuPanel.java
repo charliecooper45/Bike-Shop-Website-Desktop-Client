@@ -1,5 +1,6 @@
 package gui.panels;
 
+import gui.MainWindow;
 import gui.Utils;
 import gui.listeners.ChildMenuButtonActionListener;
 import gui.listeners.ParentMenuButtonActionListener;
@@ -17,10 +18,18 @@ import javax.swing.JPanel;
 
 public class MenuPanel extends AbstractClientPanel {
 	private static final long serialVersionUID = 1L;
-
+	
 	// menu buttons
 	private JButton[] menuButtons;
 
+	private MainWindow mainWindow;
+	
+	public MenuPanel(MainWindow mainWindow) {
+		this.mainWindow = mainWindow;
+		
+		init();
+	}
+	
 	@Override
 	protected void init() {
 		setPreferredSize(new Dimension(250, 400));
@@ -49,7 +58,7 @@ public class MenuPanel extends AbstractClientPanel {
 		menuButtons[6] = new MenuPanelButton("Administrators", usersButton);
 		
 		ActionListener parentActionListener = new ParentMenuButtonActionListener();
-		ActionListener childActionListener = new ChildMenuButtonActionListener();
+		ActionListener childActionListener = new ChildMenuButtonActionListener(mainWindow);
 		for(int i = 0; i < menuButtons.length; i++) {
 			if(i % 4 == 0) {
 				// parent button

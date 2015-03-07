@@ -13,6 +13,10 @@ public class ButtonsPanel extends AbstractClientPanel {
 	private JButton saveButton;
 	private JButton cancelButton;
 
+	public ButtonsPanel() {
+		init();
+	}
+	
 	@Override
 	protected void init() {
 		gbc.anchor = GridBagConstraints.LAST_LINE_START;
