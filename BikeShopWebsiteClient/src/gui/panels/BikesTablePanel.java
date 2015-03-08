@@ -22,7 +22,7 @@ public class BikesTablePanel extends AbstractTablePanel {
 			private static final long serialVersionUID = 1L;
 
 			//TODO: this will change according to the view
-			private String[] columns = {"Serial Number", "Basket ID", "Bike Model", "Order ID"};
+			private String[] columns = {"Serial Number", "Bike Model", "Brand", "Basket ID", "Order ID"};
 
 			@Override
 			public Object getValueAt(int row, int column) {
@@ -36,7 +36,7 @@ public class BikesTablePanel extends AbstractTablePanel {
 
 			@Override
 			public int getColumnCount() {
-				return 4;
+				return columns.length;
 			}
 			
 			@Override

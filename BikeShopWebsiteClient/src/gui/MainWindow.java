@@ -37,10 +37,8 @@ public class MainWindow extends AbstractClientWindow {
 	
 	public void displayPanel(ChildMenuButtonsEnum buttonsEnum) {
 		// remove the component currently at the centre if there is one
-		System.out.println(layout.getClass());
 		Component centreComponent = layout.getLayoutComponent(BorderLayout.CENTER);
 		if(centreComponent instanceof AbstractMainPanel) {
-			System.out.println("Removing component...");
 			remove(centreComponent);
 		}
 		
