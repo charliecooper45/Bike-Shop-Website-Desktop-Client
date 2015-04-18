@@ -1,9 +1,11 @@
 package app;
 
 import gui.ClientView;
+import hibernate.classes.views.BikeView;
 
-import javax.swing.SwingUtilities;
+import java.util.List;
 
+import model.ServiceClient;
 import controller.ClientController;
 
 /**
@@ -19,17 +21,26 @@ public class ClientApplication {
 		clientController = new ClientController(view);
 	}
 	
+	@SuppressWarnings("unused")
 	private void startApplication() {
 		clientController.showLoginWindow();
 	}
 	
 	public static void main(String[] args) {
-		SwingUtilities.invokeLater(new Runnable() {
-			@Override
-			public void run() {
-				ClientApplication client = new ClientApplication();
-				client.startApplication();
-			}
-		});
+		ServiceClient serviceClient = new ServiceClient();
+		List<BikeView> bikes = serviceClient.getBikes();
+		
+		for (BikeView bikeView : bikes) {
+			System.out.println(bikeView);
+		}
+		
+		// SwingUtilities.invokeLater(new Runnable() {
+		// @Override
+		// public void run() {
+		// ClientApplication client = new ClientApplication();
+		// client.startApplication();
+		// }
+		// });
+		
 	}
 }

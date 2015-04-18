@@ -12,6 +12,8 @@ public class BikeView {
 	private Integer basketId;
 	private Integer orderId;
 
+	public BikeView() {}
+	
 	public BikeView(String serialNumber, String modelName, String brandName, int basketId, int orderId) {
 		this.serialNumber = serialNumber;
 		this.modelName = modelName;
